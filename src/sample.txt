@@ -1,0 +1,126 @@
+<section class="pricing py-5">
+    <div className="container">
+        <div className="row">
+        <div class="col-lg-4">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">{props.title}</h5>
+                <h6 class="card-price text-center">{props.price}<span class="period">/month</span></h6>
+                <hr></hr>
+                <div>
+                <ul class="fa-ul">
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.user}</li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.storage}</li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.public_project}</li>
+                  <li><span class="fa-li"><i class="fas fa-check"></i></span>{props.community_access}</li>
+                  <li><span class="fa-li"><i class="fas fa-times"></i></span>{props.private_project}</li>
+                  <li><span class="fa-li"><i class="fas fa-times"></i></span>{props.phone_support}</li>
+                  <li><span class="fa-li"><i class="fas fa-times"></i></span>{props.subdomain}</li>
+                  <li><span class="fa-li"><i class="fas fa-times"></i></span>{props.monthly_status_reports}</li>
+                </ul>
+                <a href="#" class="btn btn-block btn-danger text-uppercase">Button</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    </section> 
+    {
+      tier                    :"free",
+      titlename1              : "Free",
+      price1                  : "$0",
+      user1                   : "Single User",
+      storage1                : "5GB Storage",
+      public_project1         : "Unlimited Public Projects",
+      community_access1       : "Community Access",
+      private_project1        : "Unlimited Private Projects",
+      phone_support1          : "Dedicated Phone Support",
+      subdomain1              : "Free Subdomain",
+      monthly_status_reports1 : "Monthly Status Reports",
+
+      },
+    {
+      tier                    : "plus",
+      titlename1              : "Plus",
+      price1                  : "$9",
+      user1                   : "5 Users",
+      storage1                : "50GB Storage",
+      public_project1         : "Unlimited Public Projects",
+      community_access1       : "Community Access",
+      private_project1        : "Unlimited Private Projects",
+      phone_support1          : "Dedicated Phone Support",
+      subdomain1              : "Free Subdomain",
+      monthly_status_reports1 : "Monthly Status Reports",
+    },
+    {
+      tier                    : "pro",
+      titlename1              : "Pro",
+      price1                  : "$49",
+      user1                   : "Unlimited Users",
+      storage1                : "150GB Storage",
+      public_project1         : "Unlimited Public Projects",
+      community_access1       : "Community Access",
+      private_project1        : "Unlimited Private Projects",
+      phone_support1          : "Dedicated Phone Support",
+      subdomain1              : "Unlimited Subdomain",
+      monthly_status_reports1 : "Monthly Status Reports",
+      }
+
+      <div>
+    {
+      plans.map((obj) => {
+        
+        if(obj.tier==="free"){
+          return <>
+          <Card 
+          title                 = {obj.titlename1}
+          price                 = {obj.price1}
+          user                  = {obj.user1}                  
+          storage               = {obj.storage1}                
+         public_project         = {obj.public_project1}         
+         community_access       = {obj.community_access1}       
+         private_project        = {obj.private_project1}       
+         phone_support          = {obj.phone_support1}       
+         subdomain              = {obj.subdomain1}         
+         monthly_status_reports = {obj.monthly_status_reports1}>              
+         </Card>
+        </>
+    
+  } else if(obj.tier==="plus"){
+          return <>
+          <Card 
+          title                 = {obj.titlename1} 
+          price                 = {obj.price1}
+          user                  = {obj.user1}                  
+          storage               = {obj.storage1}                
+         public_project         = {obj.public_project1}         
+         community_access       = {obj.community_access1}       
+         private_project        = {obj.private_project1}       
+         phone_support          = {obj.phone_support1}       
+         subdomain              = {obj.subdomain1}         
+         monthly_status_reports = {obj.monthly_status_reports1}>              
+         </Card>
+        </>
+      
+    } else if (obj.tier==="pro"){
+          return <>
+          <Card 
+          title                 = {obj.titlename1} 
+          price                 = {obj.price1}
+          user                  = {obj.user1}                  
+          storage               = {obj.storage1}                
+         public_project         = {obj.public_project1}         
+         community_access       = {obj.community_access1}       
+         private_project        = {obj.private_project1}       
+         phone_support          = {obj.phone_support1}       
+         subdomain              = {obj.subdomain1}         
+         monthly_status_reports = {obj.monthly_status_reports1}>              
+         </Card>
+        </>
+        }
+
+      })
+    
+}
+    </div>
